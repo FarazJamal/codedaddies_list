@@ -4,47 +4,26 @@
 
 {{search | title}}
 
+{% for post in final_posting %}
+
+
 <div class="row">
     <div class="col s4">
 
         <div class="card">
             <div class="card-image">
-                <a href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs70pl1hMBzGQ_7xfiJTDfo8I4VNLWgXSCjLcO0727jg&s" alt=""></a>
+                <a href=" {{ post.1 }}"><img src="{{ post.3 }}" alt=""></a>
             </div>
             <div class="card-content">
-                <p>TESTTTTTT</p>
+                <p>{{ post.0 }}</p>
             </div>
             <div class="card-action">
-                <a href="/">View listing: Price </a>
+                <a href="{{ post.1 }}">View listing: Price {{ post.2 }} </a>
             </div>
         </div>
-
-        
-        <div class="card">
-            <div class="card-image">
-                <a href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs70pl1hMBzGQ_7xfiJTDfo8I4VNLWgXSCjLcO0727jg&s" alt=""></a>
-            </div>
-            <div class="card-content">
-                <p>TESTTTTTT</p>
-            </div>
-            <div class="card-action">
-                <a href="/">View listing: Price </a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <a href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs70pl1hMBzGQ_7xfiJTDfo8I4VNLWgXSCjLcO0727jg&s" alt=""></a>
-            </div>
-            <div class="card-content">
-                <p>TESTTTTTT</p>
-            </div>
-            <div class="card-action">
-                <a href="/">View listing: Price </a>
-            </div>
-        </div>
-
     </div>
 </div>
+
+{% endfor %}
 
 {% endblock content %}
